@@ -5,13 +5,13 @@ React Portal is a nice feature in React 16+. Using portals requires that you add
 ## Install
 ---
 ```javascript
-npm install --save gatsby-plugin-fullstory
+npm install --save gatsby-plugin-portal
 ```
 
 or 
 
 ```javascript
-yarn add gatsby-plugin-fullstory
+yarn add gatsby-plugin-portal
 ```
 
 ## How to use
