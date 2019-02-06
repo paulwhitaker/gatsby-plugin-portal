@@ -1,0 +1,16 @@
+{
+  "name": "gatsby-plugin-portal",
+  "version": "1.0.0",
+  "description": "Plugin to add a div element to the root html file for use by react portal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "portal"
+  ],
+  "author": "Paul Whitaker",
+  "license": "MIT"
+}
