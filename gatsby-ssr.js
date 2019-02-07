@@ -1,10 +1,18 @@
-import React from 'react'
+"use strict";
 
-/**
- * @param { key, id, text } pluginOptions 
- */
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-export const onRenderBody = ({setPostBodyComponents}, pluginOptions) => {
-  setPostBodyComponents([
-  <div key={pluginOptions.key} id={pluginOptions.id}>{pluginOptions.text}</div>])
-}
+exports.__esModule = true;
+exports.onRenderBody = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var onRenderBody = function onRenderBody(_ref, pluginOptions) {
+  var setPostBodyComponents = _ref.setPostBodyComponents;
+  setPostBodyComponents([_react.default.createElement("div", {
+    key: pluginOptions.key ? pluginOptions.key : 'default',
+    id: pluginOptions.id ? pluginOptions.id : null
+  }, pluginOptions.text)]);
+};
+
+exports.onRenderBody = onRenderBody;

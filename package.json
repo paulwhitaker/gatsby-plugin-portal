@@ -1,16 +1,31 @@
 {
   "name": "gatsby-plugin-portal",
-  "version": "1.0.1",
+  "version": "1.0.45",
   "description": "Plugin to add a div element to the root html file for use by react portal.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build"
   },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "portal"
+    "portal",
+    "react-portal"
   ],
   "author": "Paul Whitaker",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {   
+    "@babel/runtime": "^7.3.1"    
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "babel-preset-gatsby-package": "^0.1.3",
+    "cross-env": "^5.1.4"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  }
 }
