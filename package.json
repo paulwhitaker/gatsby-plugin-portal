@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-portal",
-  "version": "1.0.45",
+  "version": "1.0.5",
   "description": "Plugin to add a div element to the root html file for use by react portal.",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,14 @@
     "react-portal"
   ],
   "author": "Paul Whitaker",
+  "bugs": {
+    "url": "https://github.com/paulwhitaker/gatsby-plugin-portal/issues"
+  },
+  "homepage": "https://github.com/paulwhitaker/gatsby-plugin-portal/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulwhitaker/gatsby-plugin-portal"
+  },
   "license": "MIT",
   "dependencies": {   
     "@babel/runtime": "^7.3.1"    
