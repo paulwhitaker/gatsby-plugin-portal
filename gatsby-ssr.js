@@ -10,8 +10,8 @@ var _react = _interopRequireDefault(require("react"));
 var onRenderBody = function onRenderBody(_ref, pluginOptions) {
   var setPostBodyComponents = _ref.setPostBodyComponents;
   setPostBodyComponents([_react.default.createElement("div", {
-    key: pluginOptions.key ? pluginOptions.key : 'default',
-    id: pluginOptions.id ? pluginOptions.id : null
+    key: pluginOptions.key ? pluginOptions.key : 'portal',
+    id: pluginOptions.id ? pluginOptions.id : 'portal'
   }, pluginOptions.text)]);
 };
 
