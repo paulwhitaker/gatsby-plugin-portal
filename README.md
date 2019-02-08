@@ -108,44 +108,38 @@ The portal will work in development mode. However, when you build the file, Gats
 Here's a code snippet explaining how to fix the problem.
 
 ```javascript
-
 import { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-// Use a ternary operator to set the portalRoot
-// Checking whether or not the document object is undefined
-// before calling document.getElementById 
+// Use a ternary operator to make sure that the document object is defined
 const portalRoot = typeof document !== `undefined` ? document.getElementById('portal') : null
 
 export default class Portal extends Component {
 
   constructor() {
     super()
-    // Create an element that can be referenced in the components
-    // Wrap this in an if statement checking for the document object
-    if (typeof document !== `undefined`) {
-      this.el = document.createElement('div')
-    }
+    // Use a ternary operator to make sure that the document object is defined
+    this.el = typeof document !== `undefined` ? document.createElement('div') : null
   }
 
-  componentDidMount = () => {
-    // check that poralRoot is defined before calling appendChild
-    portalRoot && portalRoot.appendChild(this.el)
+  componentDidMount = () => {    
+    portalRoot.appendChild(this.el)
   }
 
   componentWillUnmount = () => {
-    // Check that portalRoot is defined before calling removeChild
-    portalRoot && portalRoot.removeChild(this.el)
+    portalRoot.removeChild(this.el)
   }
 
   render() {
     const { children } = this.props
-    // Check that this.el is defined before calling createPortal
+
+    // Check that this.el is not null before using ReactDOM.createPortal
     if (this.el) {
       return ReactDOM.createPortal(children, this.el)
     } else {
       return null
     }
+
   }
 }
 
